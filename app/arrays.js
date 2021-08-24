@@ -3,7 +3,14 @@
 // input: ['This', 'is', 'a', 'split', 'sentence.']
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
+
+// .push, supply what we want to move, suplly how many positions we want to move
 function rearranger(arr) {
+    arr.shift()
+    arr.push('This')
+    return(arr)
+        
+        
 }
 
 
@@ -16,6 +23,9 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    debugger
+    let num = Math.max(...arr);
+    return(num);
 }
 
 
@@ -28,6 +38,10 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+    let arrayLength = arr.length
+    let sum = arr.map(x => x * arrayLength);
+    return(sum)
+
 }
 
 
@@ -60,9 +74,12 @@ let flights = [{
     }
 }]
 
-
+// for loop finding where this person is going to
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
+    const found = flights.to.find(x => x = destination);
+    
+    
 
 }
 
