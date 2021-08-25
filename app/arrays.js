@@ -77,8 +77,11 @@ let flights = [{
 // for loop finding where this person is going to
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
-    const found = flights.to.find(x => x = destination);
-    
+    const found = flights.find(flight => flight.to === destination.toUpperCase())
+    if (firstClass){
+        return found.prices.firstClass
+    }return found.prices.standard
+
     
 
 }
@@ -101,7 +104,10 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
 function findById(id) {
-
+    foundStaff = staff.find(x => x.id === id)
+    if(foundstaff == null){
+        return {error}
+    }else return foundStaff
 }
 
 
