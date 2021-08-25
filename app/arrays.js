@@ -23,7 +23,7 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
-    debugger
+    //debugger
     let num = Math.max(...arr);
     return(num);
 }
@@ -104,9 +104,9 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
 function findById(id) {
-    foundStaff = staff.find(x => x.id === id)
+    let foundStaff = staff.find(x => x.id === id)
     if(foundstaff == null){
-        return {error}
+        return {error: "no user with that id."}
     }else return foundStaff
 }
 
@@ -134,4 +134,11 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+    debugger
+    let theBandMembers = theBand.members
+    for (let i = 0; i <= theBandMembers.length; i++) {
+        let bandMember = theBandMembers[i];
+        return(bandMember.name + "is in the band and plays the" + bandMember.instrument)
+        
+    }
 }
